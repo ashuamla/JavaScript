@@ -1,0 +1,28 @@
+let roomClean=function()
+{
+return new Promise(function(resolve, reject)
+{
+resolve('clean the room');
+});
+};
+
+let cleanGarbage=function(message)
+{
+return new Promise(function(resolve, reject)
+{
+resolve(message+ ' clean all garbage');
+});
+};
+
+let winIceCream=function(message)
+{
+return new Promise(function(resolve, reject)
+{
+resolve(message+ ' ice cream won');
+});
+};
+
+Promise.all([roomClean, cleanGarbage, winIceCream]).then(function()
+{
+console.log('finished');
+})
